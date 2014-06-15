@@ -1,0 +1,165 @@
+.TH "iFaceRecognition/jni/com_ylwang_ifacerecognition_MyFaceDetector.h" 3 "Sat Jun 14 2014" "Version 1.3" "iFaceRecognition@YuliWANG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+iFaceRecognition/jni/com_ylwang_ifacerecognition_MyFaceDetector.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <jni\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "JNIEXPORT jlong JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeCreateObject\fP (JNIEnv *, jclass, jstring, jint)"
+.br
+.ti -1c
+.RI "JNIEXPORT jlong JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeCreateDetectionBasedTrackedObjectObject\fP (JNIEnv *, jclass, jstring, jint)"
+.br
+.ti -1c
+.RI "JNIEXPORT jlong JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeCreateCascadeClassifierObject\fP (JNIEnv *, jclass, jstring)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeDestroyObject\fP (JNIEnv *, jclass, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeDestroyDetectionBasedTrackedObjectObject\fP (JNIEnv *, jclass, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeDestroyCascadeClassifierObject\fP (JNIEnv *, jclass, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeStart\fP (JNIEnv *, jclass, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeStop\fP (JNIEnv *, jclass, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeSetFaceSize\fP (JNIEnv *, jclass, jlong, jint)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeDetect\fP (JNIEnv *, jclass, jlong, jlong, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeDetectionBasedTrackedDetect\fP (JNIEnv *, jclass, jlong, jlong, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeCascadeClassfierDetect\fP (JNIEnv *, jclass, jlong, jlong, jlong, jint)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeEqualizeLeftAndRightHalves\fP (JNIEnv *, jclass, jlong, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeGetPreprocessingImage\fP (JNIEnv *, jclass, jlong, jlong, jlong, jint, jint)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeTestDataTrans\fP (JNIEnv *, jclass, jlong, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT jdouble JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeGetSimilarity\fP (JNIEnv *, jclass, jlong, jlong, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeCreateModel\fP (JNIEnv *, jclass, jlong, jstring, jstring)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativelearnCollectedFaces\fP (JNIEnv *, jclass, jlong, jstring, jstring, jlong, jlong, jint)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeUpdate\fP (JNIEnv *, jclass, jlong, jstring, jstring, jlong, jlong, jint)"
+.br
+.ti -1c
+.RI "JNIEXPORT jint JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativePredict\fP (JNIEnv *, jclass, jlong, jstring, jstring, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_MyFaceDetector_nativeFindIrisCenter\fP (JNIEnv *, jclass, jlong, jlong, jdouble, jdouble)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeCascadeClassfierDetect (JNIEnv *, jclass, jlong, jlong, jlong, jint)"
+
+.PP
+Definition at line 256 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT jlong JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeCreateCascadeClassifierObject (JNIEnv *, jclass, jstring)"
+
+.PP
+Definition at line 81 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT jlong JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeCreateDetectionBasedTrackedObjectObject (JNIEnv *, jclass, jstring, jint)"
+
+.PP
+Definition at line 48 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeCreateModel (JNIEnv *, jclass, jlong, jstring, jstring)"
+
+.PP
+Definition at line 462 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT jlong JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeCreateObject (JNIEnv *, jclass, jstring, jint)"
+
+.PP
+Definition at line 43 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeDestroyCascadeClassifierObject (JNIEnv *, jclass, jlong)"
+
+.PP
+Definition at line 132 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeDestroyDetectionBasedTrackedObjectObject (JNIEnv *, jclass, jlong)"
+
+.PP
+Definition at line 107 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeDestroyObject (JNIEnv *, jclass, jlong)"
+
+.PP
+Definition at line 102 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeDetect (JNIEnv *, jclass, jlong, jlong, jlong)"
+
+.PP
+Definition at line 221 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeDetectionBasedTrackedDetect (JNIEnv *, jclass, jlong, jlong, jlong)"
+
+.PP
+Definition at line 228 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeEqualizeLeftAndRightHalves (JNIEnv *, jclass, jlong, jlong)"
+
+.PP
+Definition at line 320 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeFindIrisCenter (JNIEnv *, jclass, jlong, jlong, jdouble, jdouble)"
+
+.PP
+Definition at line 822 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeGetPreprocessingImage (JNIEnv *, jclass, jlong, jlong, jlong, jint, jint)"
+
+.PP
+Definition at line 339 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT jdouble JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeGetSimilarity (JNIEnv *, jclass, jlong, jlong, jlong)"
+
+.PP
+Definition at line 362 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativelearnCollectedFaces (JNIEnv *, jclass, jlong, jstring, jstring, jlong, jlong, jint)"
+
+.PP
+Definition at line 478 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT jint JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativePredict (JNIEnv *, jclass, jlong, jstring, jstring, jlong)"
+
+.PP
+Definition at line 532 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeSetFaceSize (JNIEnv *, jclass, jlong, jint)"
+
+.PP
+Definition at line 194 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeStart (JNIEnv *, jclass, jlong)"
+
+.PP
+Definition at line 151 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeStop (JNIEnv *, jclass, jlong)"
+
+.PP
+Definition at line 173 of file iFaceRecognition\&.cpp\&.
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeTestDataTrans (JNIEnv *, jclass, jlong, jlong)"
+
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_MyFaceDetector_nativeUpdate (JNIEnv *, jclass, jlong, jstring, jstring, jlong, jlong, jint)"
+
+.PP
+Definition at line 506 of file iFaceRecognition\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for iFaceRecognition@YuliWANG from the source code\&.

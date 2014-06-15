@@ -1,0 +1,95 @@
+.TH "iFaceRecognition/jni/com_ylwang_ifacerecognition_DetectionBasedTracker.h" 3 "Sat Jun 14 2014" "Version 1.3" "iFaceRecognition@YuliWANG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+iFaceRecognition/jni/com_ylwang_ifacerecognition_DetectionBasedTracker.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <jni\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "JNIEXPORT jlong JNICALL \fBJava_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeCreateObject\fP (JNIEnv *, jclass, jstring, jint)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeDestroyObject\fP (JNIEnv *, jclass, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeStart\fP (JNIEnv *, jclass, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeStop\fP (JNIEnv *, jclass, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeSetFaceSize\fP (JNIEnv *, jclass, jlong, jint)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeDetect\fP (JNIEnv *, jclass, jlong, jlong, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeEqualizeLeftAndRightHalves\fP (JNIEnv *, jclass, jlong, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeGetPreprocessingImage\fP (JNIEnv *, jclass, jlong, jlong, jlong, jint, jint)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeTestDataTrans\fP (JNIEnv *, jclass, jlong, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT jdouble JNICALL \fBJava_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeGetSimilarity\fP (JNIEnv *, jclass, jlong, jlong, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeCreateModel\fP (JNIEnv *, jclass, jlong, jstring, jstring)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_DetectionBasedTracker_nativelearnCollectedFaces\fP (JNIEnv *, jclass, jlong, jstring, jstring, jlong, jlong, jint)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeUpdate\fP (JNIEnv *, jclass, jlong, jstring, jstring, jlong, jlong, jint)"
+.br
+.ti -1c
+.RI "JNIEXPORT jint JNICALL \fBJava_com_ylwang_ifacerecognition_DetectionBasedTracker_nativePredict\fP (JNIEnv *, jclass, jlong, jstring, jstring, jlong)"
+.br
+.ti -1c
+.RI "JNIEXPORT void JNICALL \fBJava_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeFindIrisCenter\fP (JNIEnv *, jclass, jlong, jlong, jdouble, jdouble)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeCreateModel (JNIEnv *, jclass, jlong, jstring, jstring)"
+
+.SS "JNIEXPORT jlong JNICALL Java_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeCreateObject (JNIEnv *, jclass, jstring, jint)"
+
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeDestroyObject (JNIEnv *, jclass, jlong)"
+
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeDetect (JNIEnv *, jclass, jlong, jlong, jlong)"
+
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeEqualizeLeftAndRightHalves (JNIEnv *, jclass, jlong, jlong)"
+
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeFindIrisCenter (JNIEnv *, jclass, jlong, jlong, jdouble, jdouble)"
+
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeGetPreprocessingImage (JNIEnv *, jclass, jlong, jlong, jlong, jint, jint)"
+
+.SS "JNIEXPORT jdouble JNICALL Java_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeGetSimilarity (JNIEnv *, jclass, jlong, jlong, jlong)"
+
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_DetectionBasedTracker_nativelearnCollectedFaces (JNIEnv *, jclass, jlong, jstring, jstring, jlong, jlong, jint)"
+
+.SS "JNIEXPORT jint JNICALL Java_com_ylwang_ifacerecognition_DetectionBasedTracker_nativePredict (JNIEnv *, jclass, jlong, jstring, jstring, jlong)"
+
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeSetFaceSize (JNIEnv *, jclass, jlong, jint)"
+
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeStart (JNIEnv *, jclass, jlong)"
+
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeStop (JNIEnv *, jclass, jlong)"
+
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeTestDataTrans (JNIEnv *, jclass, jlong, jlong)"
+
+.SS "JNIEXPORT void JNICALL Java_com_ylwang_ifacerecognition_DetectionBasedTracker_nativeUpdate (JNIEnv *, jclass, jlong, jstring, jstring, jlong, jlong, jint)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for iFaceRecognition@YuliWANG from the source code\&.

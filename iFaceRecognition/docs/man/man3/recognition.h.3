@@ -1,0 +1,54 @@
+.TH "iFaceRecognition/jni/RecogLib/recognition.h" 3 "Sat Jun 14 2014" "Version 1.3" "iFaceRecognition@YuliWANG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+iFaceRecognition/jni/RecogLib/recognition.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include 'opencv2/opencv\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "Ptr< FaceRecognizer > \fBlearnCollectedFaces\fP (const vector< Mat > preprocessedFaces, const vector< int > faceLabels, const string facerecAlgorithm='FaceRecognizer\&.Eigenfaces')"
+.br
+.ti -1c
+.RI "void \fBshowTrainingDebugData\fP (const Ptr< FaceRecognizer > model, const int faceWidth, const int faceHeight)"
+.br
+.ti -1c
+.RI "Mat \fBreconstructFace\fP (const Ptr< FaceRecognizer > model, const Mat preprocessedFace)"
+.br
+.ti -1c
+.RI "double \fBgetSimilarity\fP (const Mat A, const Mat B)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "double getSimilarity (const MatA, const MatB)"
+
+.PP
+Definition at line 164 of file recognition\&.cpp\&.
+.SS "Ptr<FaceRecognizer> learnCollectedFaces (const vector< Mat >preprocessedFaces, const vector< int >faceLabels, const stringfacerecAlgorithm = \fC'FaceRecognizer\&.Eigenfaces'\fP)"
+
+.PP
+Definition at line 29 of file recognition\&.cpp\&.
+.SS "Mat reconstructFace (const Ptr< FaceRecognizer >model, const MatpreprocessedFace)"
+
+.PP
+Definition at line 123 of file recognition\&.cpp\&.
+.SS "void showTrainingDebugData (const Ptr< FaceRecognizer >model, const intfaceWidth, const intfaceHeight)"
+
+.PP
+Definition at line 70 of file recognition\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for iFaceRecognition@YuliWANG from the source code\&.

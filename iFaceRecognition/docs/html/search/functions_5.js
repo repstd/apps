@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['facerecactivity',['FaceRecActivity',['../classcom_1_1ylwang_1_1ifacerecognition_1_1_face_rec_activity.html#ae49e32c5bb879a0a611fe16fbcbdb481',1,'com::ylwang::ifacerecognition::FaceRecActivity']]],
+  ['facerecext',['FaceRecExt',['../classcom_1_1ylwang_1_1ifacerecognition_1_1_face_rec_ext.html#a505ec3aebbf7a6abb5d2bef7b55937e5',1,'com::ylwang::ifacerecognition::FaceRecExt']]],
+  ['findanglebetweenpointsf',['findAngleBetweenPointsF',['../_image_utils_8h.html#a8355fae3cd30c8e2134125e715465e1d',1,'findAngleBetweenPointsF(const CvPoint2D32f p1, const CvPoint2D32f p2):&#160;ImageUtils_0.7.cpp'],['../_image_utils__0_87_8cpp.html#a8355fae3cd30c8e2134125e715465e1d',1,'findAngleBetweenPointsF(const CvPoint2D32f p1, const CvPoint2D32f p2):&#160;ImageUtils_0.7.cpp']]],
+  ['findanglebetweenpointsi',['findAngleBetweenPointsI',['../_image_utils_8h.html#aa4511098296beb72b5466963498d0ad7',1,'findAngleBetweenPointsI(const CvPoint p1, const CvPoint p2):&#160;ImageUtils_0.7.cpp'],['../_image_utils__0_87_8cpp.html#aa4511098296beb72b5466963498d0ad7',1,'findAngleBetweenPointsI(const CvPoint p1, const CvPoint p2):&#160;ImageUtils_0.7.cpp']]],
+  ['finddistancebetweenpointsf',['findDistanceBetweenPointsF',['../_image_utils_8h.html#a0a7ca8e17d04231c422569e1c1c25d61',1,'findDistanceBetweenPointsF(const CvPoint2D32f p1, const CvPoint2D32f p2):&#160;ImageUtils_0.7.cpp'],['../_image_utils__0_87_8cpp.html#a0a7ca8e17d04231c422569e1c1c25d61',1,'findDistanceBetweenPointsF(const CvPoint2D32f p1, const CvPoint2D32f p2):&#160;ImageUtils_0.7.cpp']]],
+  ['finddistancebetweenpointsi',['findDistanceBetweenPointsI',['../_image_utils_8h.html#ab5a8f37501ae03e68eeab5f56bdd15c0',1,'findDistanceBetweenPointsI(const CvPoint p1, const CvPoint p2):&#160;ImageUtils_0.7.cpp'],['../_image_utils__0_87_8cpp.html#ab5a8f37501ae03e68eeab5f56bdd15c0',1,'findDistanceBetweenPointsI(const CvPoint p1, const CvPoint p2):&#160;ImageUtils_0.7.cpp']]],
+  ['findfeaturepoint',['findFeaturePoint',['../i_face_recognition_8cpp.html#ac59a386ac59c301191e53d2b5acca938',1,'iFaceRecognition.cpp']]],
+  ['findiriscenter',['findIrisCenter',['../classcom_1_1ylwang_1_1ifacerecognition_1_1_my_face_detector.html#ab4876bf62a98189ac1ecdf8d6f6c98e2',1,'com::ylwang::ifacerecognition::MyFaceDetector']]],
+  ['findpupilrect',['FindPupilRect',['../i_face_recognition_8cpp.html#ade8b3d56655c280eb3da5cda3cb34652',1,'iFaceRecognition.cpp']]]
+];

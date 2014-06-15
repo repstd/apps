@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">iFaceRecognition</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="copyright_info">CopyRight@YuliWANG</string>
+    <string name="menu_main_start">StartFaceRecognitionTest</string>
+    <string name="menu_main_add_person">Add A New Person</string>
+    <string name="menu_add_start">StartCollecting</string>
+    <string name="menu_add_save">StartTrain</string>
+    <string name="menu_add_save_predict">Trained</string>
+    <string name="menu_add_stop">StopCollecting</string>
+    <string name="dialog__usrname">People you want to add:</string>
+    <string name="add_usrname"/>
+    <string name="add_dialog_ok">OK</string>
+    <string name="menu_main_recognizer_eigen">EigenFace</string>
+    <string name="menu_main_recognizer_fisher">FisherFace</string>
+
+</resources>

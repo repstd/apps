@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/fd_add_person_surface_view"
+        android:layout_width="fill_parent"
+        android:layout_height="317dp"
+        android:layoutDirection="locale"
+        android:rotation="0"
+        android:rotationY="0" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonTraining"
+        android:layout_marginTop="14dp"
+        android:layout_toLeftOf="@+id/buttonSave"
+        android:layout_toRightOf="@+id/buttonTraining"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/buttonTraining"
+        android:text="@string/menu_add_save" />
+
+    <ImageView
+        android:id="@+id/face_dect_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_launcher" />
+
+    <Button
+        android:id="@+id/buttonTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonSave"
+        android:layout_alignParentLeft="true"
+        android:text="@string/menu_add_start"
+        android:textSize="@dimen/activity_horizontal_margin"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/text_predict_res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/face_dect_preview"
+        android:layout_marginTop="26dp"
+        android:text="PredictResultZone"
+        android:textSize="20sp"
+        android:typeface="monospace" />
+
+</RelativeLayout>

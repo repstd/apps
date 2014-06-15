@@ -1,0 +1,536 @@
+.TH "iFaceRecognition/jni/RecogLib/ImageUtils_0.7.cpp" 3 "Sat Jun 14 2014" "Version 1.3" "iFaceRecognition@YuliWANG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+iFaceRecognition/jni/RecogLib/ImageUtils_0.7.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ImageUtils\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBUSE_HIGHGUI\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBprintImageInfo\fP (const IplImage *image, const char *label)"
+.br
+.ti -1c
+.RI "void \fBprintImagePixels\fP (const IplImage *image, const char *label, int maxElements)"
+.br
+.ti -1c
+.RI "int \fBgetBitDepth\fP (const cv::Mat M)"
+.br
+.ti -1c
+.RI "void \fBprintArray2D\fP (const uchar *data, int cols, int rows, int channels, int depth_type, int step, int maxElements)"
+.br
+.ti -1c
+.RI "void \fBprintMat\fP (const cv::Mat M, const char *label, int maxElements)"
+.br
+.ti -1c
+.RI "void \fBprintMatInfo\fP (const cv::Mat M, const char *label)"
+.br
+.ti -1c
+.RI "void \fBprintMatrix\fP (const CvMat *M, const char *label, int maxElements)"
+.br
+.ti -1c
+.RI "void \fBprintPoint32f\fP (const CvPoint2D32f pt, const char *label)"
+.br
+.ti -1c
+.RI "void \fBprintLine\fP (const CvPoint ptA, const CvPoint ptB, const char *label)"
+.br
+.ti -1c
+.RI "void \fBprintDataRange\fP (const CvArr *src, const char *msg)"
+.br
+.ti -1c
+.RI "CvScalar \fBgetGraphColor\fP (void)"
+.br
+.ti -1c
+.RI "void \fBsetGraphColor\fP (int index)"
+.br
+.ti -1c
+.RI "void \fBsetCustomGraphColor\fP (int R, int B, int G)"
+.br
+.ti -1c
+.RI "IplImage * \fBdrawFloatGraph\fP (const float *arraySrc, int nArrayLength, IplImage *imageDst, float minV, float maxV, int width, int height, char *graphLabel, \fBbool\fP showScale)"
+.br
+.ti -1c
+.RI "IplImage * \fBdrawIntGraph\fP (const int *arraySrc, int nArrayLength, IplImage *imageDst, int minV, int maxV, int width, int height, char *graphLabel, \fBbool\fP showScale)"
+.br
+.ti -1c
+.RI "IplImage * \fBdrawUCharGraph\fP (const uchar *arraySrc, int nArrayLength, IplImage *imageDst, int minV, int maxV, int width, int height, char *graphLabel, \fBbool\fP showScale)"
+.br
+.ti -1c
+.RI "void \fBshowFloatGraph\fP (const char *name, const float *arraySrc, int nArrayLength, int delay_ms, IplImage *background)"
+.br
+.ti -1c
+.RI "void \fBshowIntGraph\fP (const char *name, const int *arraySrc, int nArrayLength, int delay_ms, IplImage *background)"
+.br
+.ti -1c
+.RI "void \fBshowUCharGraph\fP (const char *name, const uchar *arraySrc, int nArrayLength, int delay_ms, IplImage *background)"
+.br
+.ti -1c
+.RI "void \fBshowImage\fP (const IplImage *img, int delay_ms, char *name)"
+.br
+.ti -1c
+.RI "IplImage * \fBconvertImageToGreyscale\fP (const IplImage *imageSrc)"
+.br
+.ti -1c
+.RI "void \fBconvertPixelRGBtoHSV_256\fP (int bR, int bG, int bB, int &bH, int &bS, int &bV)"
+.br
+.ti -1c
+.RI "IplImage * \fBconvertImageRGBtoHSV\fP (const IplImage *imageRGB)"
+.br
+.ti -1c
+.RI "void \fBconvertPixelHSVtoRGB_256\fP (int bH, int bS, int bV, int &bR, int &bG, int &bB)"
+.br
+.ti -1c
+.RI "IplImage * \fBconvertImageHSVtoRGB\fP (const IplImage *imageHSV)"
+.br
+.ti -1c
+.RI "void \fBconvertPixelRGBtoHSV_180\fP (int bR, int bG, int bB, int &bH, int &bS, int &bV)"
+.br
+.ti -1c
+.RI "void \fBconvertPixelHSVtoRGB_180\fP (int bH, int bS, int bV, int &bR, int &bG, int &bB)"
+.br
+.ti -1c
+.RI "IplImage * \fBconvertImageYIQtoRGB\fP (const IplImage *imageYIQ)"
+.br
+.ti -1c
+.RI "CvPoint2D32f \fBaddPointF\fP (const CvPoint2D32f pointA, const CvPoint2D32f pointB)"
+.br
+.ti -1c
+.RI "CvPoint2D32f \fBsubtractPointF\fP (const CvPoint2D32f pointA, const CvPoint2D32f pointB)"
+.br
+.ti -1c
+.RI "CvPoint2D32f \fBscalePointF\fP (const CvPoint2D32f point, float scale)"
+.br
+.ti -1c
+.RI "CvPoint2D32f \fBrotatePointF\fP (const CvPoint2D32f point, float angleDegrees)"
+.br
+.ti -1c
+.RI "CvPoint2D32f \fBrotatePointAroundPointF\fP (const CvPoint2D32f point, const CvPoint2D32f origin, float angleDegrees)"
+.br
+.ti -1c
+.RI "CvPoint2D32f \fBscalePointAroundPointF\fP (const CvPoint2D32f point, const CvPoint2D32f origin, float scale)"
+.br
+.ti -1c
+.RI "float \fBscaleValueF\fP (float p, float s, float maxVal)"
+.br
+.ti -1c
+.RI "int \fBscaleValueI\fP (int p, float s, int maxVal)"
+.br
+.ti -1c
+.RI "float \fBfindDistanceBetweenPointsF\fP (const CvPoint2D32f p1, const CvPoint2D32f p2)"
+.br
+.ti -1c
+.RI "float \fBfindDistanceBetweenPointsI\fP (const CvPoint p1, const CvPoint p2)"
+.br
+.ti -1c
+.RI "float \fBfindAngleBetweenPointsF\fP (const CvPoint2D32f p1, const CvPoint2D32f p2)"
+.br
+.ti -1c
+.RI "float \fBfindAngleBetweenPointsI\fP (const CvPoint p1, const CvPoint p2)"
+.br
+.ti -1c
+.RI "void \fBprintPoint\fP (const CvPoint pt, const char *label)"
+.br
+.ti -1c
+.RI "void \fBprintPointF\fP (const CvPoint2D32f pt, const char *label)"
+.br
+.ti -1c
+.RI "CvRect \fBscaleRect\fP (const CvRect rectIn, float scaleX, float scaleY, int w, int \fBh\fP)"
+.br
+.ti -1c
+.RI "CvRect \fBscaleRectInPlace\fP (const CvRect rectIn, float scaleX, float scaleY, float borderX, float borderY, int w, int \fBh\fP)"
+.br
+.ti -1c
+.RI "CvRect \fBoffsetRect\fP (const CvRect rectA, const CvRect rectB)"
+.br
+.ti -1c
+.RI "CvRect \fBoffsetRectPt\fP (const CvRect rectA, const CvPoint pt)"
+.br
+.ti -1c
+.RI "void \fBdrawRect\fP (IplImage *img, const CvRect rect, const CvScalar color)"
+.br
+.ti -1c
+.RI "void \fBdrawRectFilled\fP (IplImage *img, const CvRect rect, const CvScalar color)"
+.br
+.ti -1c
+.RI "void \fBdrawCross\fP (IplImage *img, const CvPoint pt, int radius, const CvScalar color)"
+.br
+.ti -1c
+.RI "void \fBprintRect\fP (const CvRect rect, const char *label)"
+.br
+.ti -1c
+.RI "CvRect \fBcropRect\fP (const CvRect rectIn, int w, int \fBh\fP)"
+.br
+.ti -1c
+.RI "IplImage * \fBcropImage\fP (const IplImage *img, const CvRect region)"
+.br
+.ti -1c
+.RI "IplImage * \fBresizeImage\fP (const IplImage *origImg, int newWidth, int newHeight, \fBbool\fP keepAspectRatio)"
+.br
+.ti -1c
+.RI "IplImage * \fBrotateImage\fP (const IplImage *src, float angleDegrees, float scale)"
+.br
+.ti -1c
+.RI "CvPoint2D32f \fBmapRotatedImagePoint\fP (const CvPoint2D32f pointOrig, const IplImage *image, float angleDegrees, float scale)"
+.br
+.ti -1c
+.RI "IplImage * \fBsmoothImageBilateral\fP (const IplImage *src, float smoothness)"
+.br
+.ti -1c
+.RI "IplImage * \fBcombineImagesResized\fP (int nArgs,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "IplImage * \fBcombineImages\fP (int nArgs,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "IplImage * \fBblendImage\fP (const IplImage *image1, const IplImage *image2, const IplImage *imageAlphaMask)"
+.br
+.ti -1c
+.RI "int \fBsaveImage\fP (const char *filename, const IplImage *image)"
+.br
+.ti -1c
+.RI "void \fBsaveFloatMat\fP (const char *filename, const CvMat *srcMat)"
+.br
+.ti -1c
+.RI "IplImage * \fBconvertMatrixToUcharImage\fP (const CvMat *srcMat)"
+.br
+.ti -1c
+.RI "IplImage * \fBconvertFloatImageToUcharImage\fP (const IplImage *srcImg)"
+.br
+.ti -1c
+.RI "void \fBsaveFloatImage\fP (const char *filename, const IplImage *srcImg)"
+.br
+.ti -1c
+.RI "void \fBdrawText\fP (IplImage *img, CvPoint position, CvScalar color, char *fmt,\&.\&.\&.)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const CvScalar \fBBLACK\fP = CV_RGB(0,0,0)"
+.br
+.ti -1c
+.RI "const CvScalar \fBWHITE\fP = CV_RGB(255,255,255)"
+.br
+.ti -1c
+.RI "const CvScalar \fBGREY\fP = CV_RGB(150,150,150)"
+.br
+.ti -1c
+.RI "int \fBcountGraph\fP = 0"
+.br
+.ti -1c
+.RI "CvScalar \fBcustomGraphColor\fP"
+.br
+.ti -1c
+.RI "int \fBusingCustomGraphColor\fP = 0"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define USE_HIGHGUI"
+
+.PP
+Definition at line 19 of file ImageUtils_0\&.7\&.cpp\&.
+.SH "Function Documentation"
+.PP 
+.SS "CvPoint2D32f addPointF (const CvPoint2D32fpointA, const CvPoint2D32fpointB)"
+
+.PP
+Definition at line 1205 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* blendImage (const IplImage *image1, const IplImage *image2, const IplImage *imageAlphaMask)"
+
+.PP
+Definition at line 1946 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* combineImages (intnArgs, \&.\&.\&.)"
+
+.PP
+Definition at line 1841 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* combineImagesResized (intnArgs, \&.\&.\&.)"
+
+.PP
+Definition at line 1708 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* convertFloatImageToUcharImage (const IplImage *srcImg)"
+
+.PP
+Definition at line 2085 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* convertImageHSVtoRGB (const IplImage *imageHSV)"
+
+.PP
+Definition at line 1069 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* convertImageRGBtoHSV (const IplImage *imageRGB)"
+
+.PP
+Definition at line 931 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* convertImageToGreyscale (const IplImage *imageSrc)"
+
+.PP
+Definition at line 809 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* convertImageYIQtoRGB (const IplImage *imageYIQ)"
+
+.PP
+Definition at line 1128 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* convertMatrixToUcharImage (const CvMat *srcMat)"
+
+.PP
+Definition at line 2073 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void convertPixelHSVtoRGB_180 (intbH, intbS, intbV, int &bR, int &bG, int &bB)"
+
+.PP
+Definition at line 1117 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void convertPixelHSVtoRGB_256 (intbH, intbS, intbV, int &bR, int &bG, int &bB)\fC [inline]\fP"
+
+.PP
+Definition at line 970 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void convertPixelRGBtoHSV_180 (intbR, intbG, intbB, int &bH, int &bS, int &bV)"
+
+.PP
+Definition at line 1107 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void convertPixelRGBtoHSV_256 (intbR, intbG, intbB, int &bH, int &bS, int &bV)\fC [inline]\fP"
+
+.PP
+Definition at line 826 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* cropImage (const IplImage *img, const CvRectregion)"
+
+.PP
+Definition at line 1541 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "CvRect cropRect (const CvRectrectIn, intw, inth)"
+
+.PP
+Definition at line 1464 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void drawCross (IplImage *img, const CvPointpt, intradius, const CvScalarcolor)"
+
+.PP
+Definition at line 1440 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* drawFloatGraph (const float *arraySrc, intnArrayLength, IplImage *imageDst, floatminV, floatmaxV, intwidth, intheight, char *graphLabel, \fBbool\fPshowScale)"
+
+.PP
+Definition at line 464 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* drawIntGraph (const int *arraySrc, intnArrayLength, IplImage *imageDst, intminV, intmaxV, intwidth, intheight, char *graphLabel, \fBbool\fPshowScale)"
+
+.PP
+Definition at line 553 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void drawRect (IplImage *img, const CvRectrect, const CvScalar color)"
+
+.PP
+Definition at line 1419 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void drawRectFilled (IplImage *img, const CvRectrect, const CvScalar color)"
+
+.PP
+Definition at line 1429 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void drawText (IplImage *img, CvPointposition, CvScalarcolor, char *fmt, \&.\&.\&.)"
+
+.PP
+Definition at line 2134 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* drawUCharGraph (const uchar *arraySrc, intnArrayLength, IplImage *imageDst, intminV, intmaxV, intwidth, intheight, char *graphLabel, \fBbool\fPshowScale)"
+
+.PP
+Definition at line 642 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "float findAngleBetweenPointsF (const CvPoint2D32fp1, const CvPoint2D32fp2)"
+
+.PP
+Definition at line 1305 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "float findAngleBetweenPointsI (const CvPointp1, const CvPointp2)"
+
+.PP
+Definition at line 1315 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "float findDistanceBetweenPointsF (const CvPoint2D32fp1, const CvPoint2D32fp2)"
+
+.PP
+Definition at line 1289 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "float findDistanceBetweenPointsI (const CvPointp1, const CvPointp2)"
+
+.PP
+Definition at line 1296 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "int getBitDepth (const cv::MatM)"
+
+.PP
+Definition at line 122 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "CvScalar getGraphColor (void)"
+
+.PP
+Definition at line 426 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "CvPoint2D32f mapRotatedImagePoint (const CvPoint2D32fpointOrig, const IplImage *image, floatangleDegrees, floatscale)"
+
+.PP
+Definition at line 1662 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "CvRect offsetRect (const CvRectrectA, const CvRectrectB)"
+
+.PP
+Definition at line 1397 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "CvRect offsetRectPt (const CvRectrectA, const CvPointpt)"
+
+.PP
+Definition at line 1408 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void printArray2D (const uchar *data, intcols, introws, intchannels, intdepth_type, intstep, intmaxElements)"
+
+.PP
+Definition at line 142 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void printDataRange (const CvArr *src, const char *msg)"
+
+.PP
+Definition at line 389 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void printImageInfo (const IplImage *image, const char *label)"
+
+.PP
+Definition at line 29 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void printImagePixels (const IplImage *image, const char *label, intmaxElements)"
+
+.PP
+Definition at line 52 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void printLine (const CvPointptA, const CvPointptB, const char *label)"
+
+.PP
+Definition at line 379 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void printMat (const cv::MatM, const char *label, intmaxElements)"
+
+.PP
+Definition at line 222 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void printMatInfo (const cv::MatM, const char *label)"
+
+.PP
+Definition at line 265 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void printMatrix (const CvMat *M, const char *label, intmaxElements)"
+
+.PP
+Definition at line 272 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void printPoint (const CvPointpt, const char *label)"
+
+.PP
+Definition at line 1326 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void printPoint32f (const CvPoint2D32fpt, const char *label)"
+
+.PP
+Definition at line 369 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void printPointF (const CvPoint2D32fpt, const char *label)"
+
+.PP
+Definition at line 1334 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void printRect (const CvRectrect, const char *label)"
+
+.PP
+Definition at line 1455 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* resizeImage (const IplImage *origImg, intnewWidth, intnewHeight, \fBbool\fPkeepAspectRatio)"
+
+.PP
+Definition at line 1568 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* rotateImage (const IplImage *src, floatangleDegrees, floatscale)"
+
+.PP
+Definition at line 1628 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "CvPoint2D32f rotatePointAroundPointF (const CvPoint2D32fpoint, const CvPoint2D32forigin, floatangleDegrees)"
+
+.PP
+Definition at line 1242 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "CvPoint2D32f rotatePointF (const CvPoint2D32fpoint, floatangleDegrees)"
+
+.PP
+Definition at line 1229 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void saveFloatImage (const char *filename, const IplImage *srcImg)"
+
+.PP
+Definition at line 2118 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void saveFloatMat (const char *filename, const CvMat *srcMat)"
+
+.PP
+Definition at line 2056 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "int saveImage (const char *filename, const IplImage *image)"
+
+.PP
+Definition at line 2039 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "CvPoint2D32f scalePointAroundPointF (const CvPoint2D32fpoint, const CvPoint2D32forigin, floatscale)"
+
+.PP
+Definition at line 1255 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "CvPoint2D32f scalePointF (const CvPoint2D32fpoint, floatscale)"
+
+.PP
+Definition at line 1221 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "CvRect scaleRect (const CvRectrectIn, floatscaleX, floatscaleY, intw, inth)"
+
+.PP
+Definition at line 1349 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "CvRect scaleRectInPlace (const CvRectrectIn, floatscaleX, floatscaleY, floatborderX, floatborderY, intw, inth)"
+
+.PP
+Definition at line 1370 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "float scaleValueF (floatp, floats, floatmaxVal)"
+
+.PP
+Definition at line 1266 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "int scaleValueI (intp, floats, intmaxVal)"
+
+.PP
+Definition at line 1277 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void setCustomGraphColor (intR, intB, intG)"
+
+.PP
+Definition at line 456 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void setGraphColor (intindex)"
+
+.PP
+Definition at line 450 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void showFloatGraph (const char *name, const float *arraySrc, intnArrayLength, intdelay_ms, IplImage *background)"
+
+.PP
+Definition at line 732 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void showImage (const IplImage *img, intdelay_ms, char *name)"
+
+.PP
+Definition at line 790 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void showIntGraph (const char *name, const int *arraySrc, intnArrayLength, intdelay_ms, IplImage *background)"
+
+.PP
+Definition at line 752 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "void showUCharGraph (const char *name, const uchar *arraySrc, intnArrayLength, intdelay_ms, IplImage *background)"
+
+.PP
+Definition at line 772 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "IplImage* smoothImageBilateral (const IplImage *src, floatsmoothness)"
+
+.PP
+Definition at line 1685 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "CvPoint2D32f subtractPointF (const CvPoint2D32fpointA, const CvPoint2D32fpointB)"
+
+.PP
+Definition at line 1213 of file ImageUtils_0\&.7\&.cpp\&.
+.SH "Variable Documentation"
+.PP 
+.SS "const CvScalar BLACK = CV_RGB(0,0,0)"
+
+.PP
+Definition at line 417 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "int countGraph = 0"
+
+.PP
+Definition at line 421 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "CvScalar customGraphColor"
+
+.PP
+Definition at line 422 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "const CvScalar GREY = CV_RGB(150,150,150)"
+
+.PP
+Definition at line 419 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "int usingCustomGraphColor = 0"
+
+.PP
+Definition at line 423 of file ImageUtils_0\&.7\&.cpp\&.
+.SS "const CvScalar WHITE = CV_RGB(255,255,255)"
+
+.PP
+Definition at line 418 of file ImageUtils_0\&.7\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for iFaceRecognition@YuliWANG from the source code\&.

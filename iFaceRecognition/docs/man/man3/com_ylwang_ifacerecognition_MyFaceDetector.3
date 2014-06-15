@@ -1,0 +1,148 @@
+.TH "com.ylwang.ifacerecognition.MyFaceDetector" 3 "Sat Jun 14 2014" "Version 1.3" "iFaceRecognition@YuliWANG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+com.ylwang.ifacerecognition.MyFaceDetector \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMyFaceDetector\fP (String cascadeName, int minFaceSize, int detectorType)"
+.br
+.ti -1c
+.RI "void \fBstart\fP ()"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMinFaceSize\fP (int size)"
+.br
+.ti -1c
+.RI "void \fBequalizeLeftAndRightHalves\fP (Mat pre_view_res)"
+.br
+.ti -1c
+.RI "void \fBgetPreprocessingImage\fP (Mat faceImg, Mat outImg, int desiredWidth, int desiredHeight)"
+.br
+.ti -1c
+.RI "void \fBdetect\fP (Mat imageGray, MatOfRect faces)"
+.br
+.ti -1c
+.RI "void \fBrelease\fP ()"
+.br
+.ti -1c
+.RI "void \fBcreateFaceAlgorithm\fP (String facerecAlgorithm, String modelName)"
+.br
+.ti -1c
+.RI "void \fBlearnCollectedFaces\fP (Vector< Mat > preprocessedFaces, Mat faceLabels)"
+.br
+.ti -1c
+.RI "void \fBupdateFaceRecognizer\fP (Vector< Mat > preprocessedFaces, Mat faceLabels)"
+.br
+.ti -1c
+.RI "double \fBgetSimilarity\fP (Mat matA, Mat matB)"
+.br
+.ti -1c
+.RI "void \fBfindIrisCenter\fP (Mat faceImg, double threshold, double ratio)"
+.br
+.ti -1c
+.RI "int \fBpredict\fP (Mat faceImg)"
+.br
+.ti -1c
+.RI "boolean \fBgetModelStatus\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static final int \fBTYPE_DetectionBasedTracker\fP = 1"
+.br
+.ti -1c
+.RI "static final int \fBTYPE_CascadeClassfier\fP = 2"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 14 of file MyFaceDetector\&.java\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.MyFaceDetector (StringcascadeName, intminFaceSize, intdetectorType)\fC [inline]\fP"
+
+.PP
+Definition at line 19 of file MyFaceDetector\&.java\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.createFaceAlgorithm (StringfacerecAlgorithm, StringmodelName)\fC [inline]\fP"
+
+.PP
+Definition at line 125 of file MyFaceDetector\&.java\&.
+.SS "void com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.detect (MatimageGray, MatOfRectfaces)\fC [inline]\fP"
+
+.PP
+Definition at line 93 of file MyFaceDetector\&.java\&.
+.SS "void com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.equalizeLeftAndRightHalves (Matpre_view_res)\fC [inline]\fP"
+
+.PP
+Definition at line 79 of file MyFaceDetector\&.java\&.
+.SS "void com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.findIrisCenter (MatfaceImg, doublethreshold, doubleratio)\fC [inline]\fP"
+
+.PP
+Definition at line 157 of file MyFaceDetector\&.java\&.
+.SS "boolean com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.getModelStatus ()\fC [inline]\fP"
+
+.PP
+Definition at line 169 of file MyFaceDetector\&.java\&.
+.SS "void com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.getPreprocessingImage (MatfaceImg, MatoutImg, intdesiredWidth, intdesiredHeight)\fC [inline]\fP"
+
+.PP
+Definition at line 85 of file MyFaceDetector\&.java\&.
+.SS "double com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.getSimilarity (MatmatA, MatmatB)\fC [inline]\fP"
+
+.PP
+Definition at line 152 of file MyFaceDetector\&.java\&.
+.SS "void com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.learnCollectedFaces (Vector< Mat >preprocessedFaces, MatfaceLabels)\fC [inline]\fP"
+
+.PP
+Definition at line 130 of file MyFaceDetector\&.java\&.
+.SS "int com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.predict (MatfaceImg)\fC [inline]\fP"
+
+.PP
+Definition at line 163 of file MyFaceDetector\&.java\&.
+.SS "void com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.release ()\fC [inline]\fP"
+
+.PP
+Definition at line 110 of file MyFaceDetector\&.java\&.
+.SS "void com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.setMinFaceSize (intsize)\fC [inline]\fP"
+
+.PP
+Definition at line 66 of file MyFaceDetector\&.java\&.
+.SS "void com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.start ()\fC [inline]\fP"
+
+.PP
+Definition at line 56 of file MyFaceDetector\&.java\&.
+.SS "void com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.stop ()\fC [inline]\fP"
+
+.PP
+Definition at line 61 of file MyFaceDetector\&.java\&.
+.SS "void com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.updateFaceRecognizer (Vector< Mat >preprocessedFaces, MatfaceLabels)\fC [inline]\fP"
+
+.PP
+Definition at line 142 of file MyFaceDetector\&.java\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "final int com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.TYPE_CascadeClassfier = 2\fC [static]\fP"
+
+.PP
+Definition at line 17 of file MyFaceDetector\&.java\&.
+.SS "final int com\&.ylwang\&.ifacerecognition\&.MyFaceDetector\&.TYPE_DetectionBasedTracker = 1\fC [static]\fP"
+
+.PP
+Definition at line 16 of file MyFaceDetector\&.java\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for iFaceRecognition@YuliWANG from the source code\&.
