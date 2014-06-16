@@ -1,0 +1,10 @@
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+del /f/q .\libs\armeabi\libiFaceRecognition.so    >NUL 2>NUL
+Install        : libiFaceRecognition.so => libs/armeabi/libiFaceRecognition.so
+copy /b/y ".\obj\local\armeabi\libiFaceRecognition.so" ".\libs\armeabi\libiFaceRecognition.so" > NUL
+D:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/toolchains/arm-linux-androideabi-4.6/prebuilt/windows/bin/arm-linux-androideabi-strip --strip-unneeded  ./libs/armeabi/libiFaceRecognition.so
+
+**** Build Finished ****

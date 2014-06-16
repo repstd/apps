@@ -1,0 +1,236 @@
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+jni/Android.mk:5: ../OpenCVSDK/native/jni/OpenCV.mk: No such file or directory
+make: *** No rule to make target `../OpenCVSDK/native/jni/OpenCV.mk'.  Stop.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd clean 
+jni/Android.mk:5: ../OpenCVSDK/native/jni/OpenCV.mk: No such file or directory
+make: *** No rule to make target `../OpenCVSDK/native/jni/OpenCV.mk'.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+jni/Android.mk:5: ../OpenCVSDK/native/jni/OpenCV.mk: No such file or directory
+make: *** No rule to make target `../OpenCVSDK/native/jni/OpenCV.mk'.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+jni/Android.mk:5: ../OpenCVSDK/native/jni/OpenCV.mk: No such file or directory
+make: *** No rule to make target `../OpenCVSDK/native/jni/OpenCV.mk'.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+jni/Android.mk:5: ../OpenCVSDK/native/jni/OpenCV.mk: No such file or directory
+make: *** No rule to make target `../OpenCVSDK/native/jni/OpenCV.mk'.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+jni/Android.mk:5: ../OpenCV: No such file or directory
+jni/Android.mk:5: Library: No such file or directory
+jni/Android.mk:5: -: No such file or directory
+jni/Android.mk:5: 2.4.8/native/jni/OpenCV.mk: No such file or directory
+make: *** No rule to make target `2.4.8/native/jni/OpenCV.mk'.  Stop.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd clean 
+jni/Android.mk:5: ../OpenCV: No such file or directory
+jni/Android.mk:5: Library: No such file or directory
+jni/Android.mk:5: -: No such file or directory
+jni/Android.mk:5: 2.4.8/native/jni/OpenCV.mk: No such file or directory
+make: *** No rule to make target `2.4.8/native/jni/OpenCV.mk'.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+jni/Android.mk:5: ../OpenCV: No such file or directory
+jni/Android.mk:5: Library: No such file or directory
+jni/Android.mk:5: -: No such file or directory
+jni/Android.mk:5: 2.4.8/native/jni/OpenCV.mk: No such file or directory
+make: *** No rule to make target `2.4.8/native/jni/OpenCV.mk'.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+jni/Android.mk:5: ../OpenCV: No such file or directory
+jni/Android.mk:5: Library: No such file or directory
+jni/Android.mk:5: -: No such file or directory
+jni/Android.mk:5: 2.4.8/native/jni/OpenCV.mk: No such file or directory
+make: *** No rule to make target `2.4.8/native/jni/OpenCV.mk'.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+jni/Android.mk:5: ../OpenCV: No such file or directory
+jni/Android.mk:5: Library: No such file or directory
+jni/Android.mk:5: -: No such file or directory
+jni/Android.mk:5: 2.4.8/native/jni/OpenCV.mk: No such file or directory
+make: *** No rule to make target `2.4.8/native/jni/OpenCV.mk'.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+jni/Android.mk:5: ../OpenCV: No such file or directory
+jni/Android.mk:5: Library: No such file or directory
+jni/Android.mk:5: -: No such file or directory
+jni/Android.mk:5: 2.4.8/native/jni/OpenCV.mk: No such file or directory
+make: *** No rule to make target `2.4.8/native/jni/OpenCV.mk'.  Stop.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd clean 
+jni/Android.mk:5: ../OpenCV: No such file or directory
+jni/Android.mk:5: Library: No such file or directory
+jni/Android.mk:5: -: No such file or directory
+jni/Android.mk:5: 2.4.8/native/jni/OpenCV.mk: No such file or directory
+make: *** No rule to make target `2.4.8/native/jni/OpenCV.mk'.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+jni/Android.mk:5: ../OpenCV: No such file or directory
+jni/Android.mk:5: Library: No such file or directory
+jni/Android.mk:5: -: No such file or directory
+jni/Android.mk:5: 2.4.8/native/jni/OpenCV.mk: No such file or directory
+make: *** No rule to make target `2.4.8/native/jni/OpenCV.mk'.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+jni/Android.mk:5: ../OpenCV: No such file or directory
+jni/Android.mk:5: Library: No such file or directory
+jni/Android.mk:5: -: No such file or directory
+jni/Android.mk:5: 2.4.8/native/jni/OpenCV.mk: No such file or directory
+make: *** No rule to make target `2.4.8/native/jni/OpenCV.mk'.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+jni/Android.mk:5: ../OpenCV: No such file or directory
+jni/Android.mk:5: Library: No such file or directory
+jni/Android.mk:5: -: No such file or directory
+jni/Android.mk:5: 2.4.8/native/jni/OpenCV.mk: No such file or directory
+make: *** No rule to make target `2.4.8/native/jni/OpenCV.mk'.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+del /f/q .\libs\armeabi\libiFaceRecognition.so    >NUL 2>NUL
+"Compile++ thumb : iFaceRecognition <= iFaceRecognition.cpp
+D:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/toolchains/arm-linux-androideabi-4.6/prebuilt/windows/bin/arm-linux-androideabi-g++ -MMD -MP -MF ./obj/local/armeabi/objs/iFaceRecognition/iFaceRecognition.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-exceptions -fno-rtti -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -I"../OpenCVSDK/native/jni/include/opencv" -I"../OpenCVSDK/native/jni/include" -ID:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/include -ID:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/libs/armeabi/include -Ijni -DANDROID -fPIC -DANDROID -fsigned-char -Wa,--noexecstack    -frtti -fexceptions  -ID:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/platforms/android-8/arch-arm/usr/include -c  jni/iFaceRecognition.cpp -o ./obj/local/armeabi/objs/iFaceRecognition/iFaceRecognition.o 
+"Compile++ thumb : iFaceRecognition <= ImageUtils_0.7.cpp
+D:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/toolchains/arm-linux-androideabi-4.6/prebuilt/windows/bin/arm-linux-androideabi-g++ -MMD -MP -MF ./obj/local/armeabi/objs/iFaceRecognition/RecogLib/ImageUtils_0.7.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-exceptions -fno-rtti -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -I"../OpenCVSDK/native/jni/include/opencv" -I"../OpenCVSDK/native/jni/include" -ID:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/include -ID:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/libs/armeabi/include -Ijni -DANDROID -fPIC -DANDROID -fsigned-char -Wa,--noexecstack    -frtti -fexceptions  -ID:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/platforms/android-8/arch-arm/usr/include -c  jni/RecogLib/ImageUtils_0.7.cpp -o ./obj/local/armeabi/objs/iFaceRecognition/RecogLib/ImageUtils_0.7.o 
+"Compile++ thumb : iFaceRecognition <= recognition.cpp
+D:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/toolchains/arm-linux-androideabi-4.6/prebuilt/windows/bin/arm-linux-androideabi-g++ -MMD -MP -MF ./obj/local/armeabi/objs/iFaceRecognition/RecogLib/recognition.o.d -fpic -ffunction-sections -funwind-tables -fstack-protector -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-exceptions -fno-rtti -mthumb -Os -g -DNDEBUG -fomit-frame-pointer -fno-strict-aliasing -finline-limit=64 -I"../OpenCVSDK/native/jni/include/opencv" -I"../OpenCVSDK/native/jni/include" -ID:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/include -ID:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/libs/armeabi/include -Ijni -DANDROID -fPIC -DANDROID -fsigned-char -Wa,--noexecstack    -frtti -fexceptions  -ID:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/platforms/android-8/arch-arm/usr/include -c  jni/RecogLib/recognition.cpp -o ./obj/local/armeabi/objs/iFaceRecognition/RecogLib/recognition.o 
+SharedLibrary  : libiFaceRecognition.so
+D:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/toolchains/arm-linux-androideabi-4.6/prebuilt/windows/bin/arm-linux-androideabi-g++ -Wl,-soname,libiFaceRecognition.so -shared --sysroot=D:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/platforms/android-8/arch-arm ./obj/local/armeabi/objs/iFaceRecognition/iFaceRecognition.o ./obj/local/armeabi/objs/iFaceRecognition/RecogLib/ImageUtils_0.7.o ./obj/local/armeabi/objs/iFaceRecognition/RecogLib/recognition.o D:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/libs/armeabi/libgnustl_static.a -lgcc -no-canonical-prefixes  -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now  -LD:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/platforms/android-8/arch-arm/usr/lib -L../OpenCVSDK/native/jni/../libs/armeabi -lopencv_java -llog -ldl -lc -lm -o ./obj/local/armeabi/libiFaceRecognition.so
+Install        : libiFaceRecognition.so => libs/armeabi/libiFaceRecognition.so
+copy /b/y ".\obj\local\armeabi\libiFaceRecognition.so" ".\libs\armeabi\libiFaceRecognition.so" > NUL
+D:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/toolchains/arm-linux-androideabi-4.6/prebuilt/windows/bin/arm-linux-androideabi-strip --strip-unneeded  ./libs/armeabi/libiFaceRecognition.so
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+del /f/q .\libs\armeabi\libiFaceRecognition.so    >NUL 2>NUL
+Install        : libiFaceRecognition.so => libs/armeabi/libiFaceRecognition.so
+copy /b/y ".\obj\local\armeabi\libiFaceRecognition.so" ".\libs\armeabi\libiFaceRecognition.so" > NUL
+D:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/toolchains/arm-linux-androideabi-4.6/prebuilt/windows/bin/arm-linux-androideabi-strip --strip-unneeded  ./libs/armeabi/libiFaceRecognition.so
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+del /f/q .\libs\armeabi\libiFaceRecognition.so    >NUL 2>NUL
+Install        : libiFaceRecognition.so => libs/armeabi/libiFaceRecognition.so
+copy /b/y ".\obj\local\armeabi\libiFaceRecognition.so" ".\libs\armeabi\libiFaceRecognition.so" > NUL
+D:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/toolchains/arm-linux-androideabi-4.6/prebuilt/windows/bin/arm-linux-androideabi-strip --strip-unneeded  ./libs/armeabi/libiFaceRecognition.so
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+del /f/q .\libs\armeabi\libiFaceRecognition.so    >NUL 2>NUL
+Install        : libiFaceRecognition.so => libs/armeabi/libiFaceRecognition.so
+copy /b/y ".\obj\local\armeabi\libiFaceRecognition.so" ".\libs\armeabi\libiFaceRecognition.so" > NUL
+D:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/toolchains/arm-linux-androideabi-4.6/prebuilt/windows/bin/arm-linux-androideabi-strip --strip-unneeded  ./libs/armeabi/libiFaceRecognition.so
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd clean 
+Clean: gnustl_shared [armeabi]
+Clean: gnustl_static [armeabi]
+Clean: iFaceRecognition [armeabi]
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+Install        : libiFaceRecognition.so => libs/armeabi/libiFaceRecognition.so
+copy /b/y ".\obj\local\armeabi\libiFaceRecognition.so" ".\libs\armeabi\libiFaceRecognition.so" > NUL
+D:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/toolchains/arm-linux-androideabi-4.6/prebuilt/windows/bin/arm-linux-androideabi-strip --strip-unneeded  ./libs/armeabi/libiFaceRecognition.so
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+del /f/q .\libs\armeabi\libiFaceRecognition.so    >NUL 2>NUL
+Install        : libiFaceRecognition.so => libs/armeabi/libiFaceRecognition.so
+copy /b/y ".\obj\local\armeabi\libiFaceRecognition.so" ".\libs\armeabi\libiFaceRecognition.so" > NUL
+D:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/toolchains/arm-linux-androideabi-4.6/prebuilt/windows/bin/arm-linux-androideabi-strip --strip-unneeded  ./libs/armeabi/libiFaceRecognition.so
+
+**** Build Finished ****
+
+**** Build of configuration Default for project iFaceRecognition ****
+
+ndk-build.cmd V=1 
+del /f/q .\libs\armeabi\libiFaceRecognition.so    >NUL 2>NUL
+Install        : libiFaceRecognition.so => libs/armeabi/libiFaceRecognition.so
+copy /b/y ".\obj\local\armeabi\libiFaceRecognition.so" ".\libs\armeabi\libiFaceRecognition.so" > NUL
+D:/MyDocument/CS_Related/android/android-ndk-r8e-windows-x86/android-ndk-r8e/toolchains/arm-linux-androideabi-4.6/prebuilt/windows/bin/arm-linux-androideabi-strip --strip-unneeded  ./libs/armeabi/libiFaceRecognition.so
+
+**** Build Finished ****
