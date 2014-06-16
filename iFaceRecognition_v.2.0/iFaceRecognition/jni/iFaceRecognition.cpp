@@ -580,7 +580,7 @@ Rect FindPupilRect(Mat src, double threshod, double ratio, Rect* res) {
 //     dilate(tmp, tmp, element);
 
 	vector<Vec4i> hierarchy;
-	vector < vector<Point2i> > contours;
+	vector<vector<Point2i> > contours;
 	findContours(tmp, contours, hierarchy, CV_RETR_LIST,
 			CV_CHAIN_APPROX_SIMPLE);
 	cout << contours.size() << endl;
@@ -640,49 +640,79 @@ void eclipseMask(Mat faceImg, Mat outImg) {
 	LOGD_ERR("EclipseMask Exit");
 //return outImg;
 }
-bool my_cmp(const vector<Point2i> &a, const vector<Point2i> &b) {
+bool my_cmp_pos(const vector<Point2i> &a, const vector<Point2i> &b)
+{
 	Rect recta = boundingRect(a);
 	Rect rectb = boundingRect(b);
 	return (recta.tl().y + recta.br().y) > (rectb.tl().y + rectb.br().y);
+}
+bool my_cmp_area(const vector<Point2i> &a, const vector<Point2i> &b)
+{
+	Rect recta = boundingRect(a);
+	Rect rectb = boundingRect(b);
+	return recta.area()>rectb.area();
 }
 
 void findFeaturePoint(Mat src, vector<Point>& point, vector<Rect>& rect_res,
 		int FLAG) {
 	LOGD_ERR("findFeaturePoint Enter");
-	char name[10];
+	/*char name[10];
+	char nameEqualHist[30];
+	char nameThresh[30];
 	sprintf(name, "Step %d", FLAG);
+	sprintf(nameEqualHist, "After Equalize %d", FLAG);
+	sprintf(nameThresh, "After Threshold %d", FLAG);*/
 	Mat src_mask = Mat(src.size(), CV_8U);
 	Mat thresholdRes = Mat(src.size(), CV_8U);
 	Mat thresholdResCopy = Mat(src.size(), CV_8U);
+	//	Mat src_copy=Mat(src.size(), CV_8U);
+	//src.copyTo(src_copy);
+
 	eclipseMask(src, src_mask);
 	if (FLAG)
 		equalizeLeftAndRightHalves(src_mask);
 
-//imshow("After Equalize", src_mask);
+//	imshow(nameEqualHist, src_mask);
+
 	double minVal = 0;
 	double maxVal = 0;
 
 	minMaxLoc(src_mask, &minVal, &maxVal, NULL, NULL);
-//threshold(src, threRes, maxVal-10, 255, THRESH_BINARY);
+
+	//threshold(src, threRes, maxVal-10, 255, THRESH_BINARY);
+
+	//cout<<thres<<" "<<minVal+7.5<<endl;
+	//threshold(src_mask, thresholdRes, minVal + 7.5, 255, THRESH_BINARY);
+	//int thres=Otsu(src_mask);
+	//threshold(src_mask,thresholdRes,thres,255,THRESH_BINARY);
+	//cout<<"thres"<<" "<<thres<<endl;
 	threshold(src_mask, thresholdRes, minVal + 7.5, 255, THRESH_BINARY);
+//	imshow(nameThresh, thresholdRes);
+	//threshold(src_mask, thresholdRes, minVal + 9.5, 255, THRESH_BINARY);
 	thresholdRes.copyTo(thresholdResCopy);
-//LOGD_ERR("Threshold Over");
-//imshow(name, thresholdRes);
+	//LOGD_ERR("Threshold Over");
+
 	vector<Vec4i> hierarchy;
-	vector < vector<Point2i> > contours;
+	vector<vector<Point2i> > contours;
 	findContours(thresholdResCopy.rowRange(0, thresholdRes.rows / 2), contours,
 			hierarchy, CV_RETR_LIST, CV_CHAIN_APPROX_SIMPLE);
-//LOGD_ERR("findContours Over");
-	sort(contours.begin(), contours.end(), my_cmp);
-//LOGD_ERR("sort Over");
-//cout << contours.size() << endl;
-//LOGD_ERR(contours.size());
-	Rect rect;
-	if (contours.size() < 2)
+	//LOGD_ERR("findContours Over");
+
+	if (contours.size() == 0)
 		return;
+	//sort(contours.begin(), contours.end(), my_cmp_area);
+	sort(contours.begin(), contours.end(), my_cmp_pos);
+
+	//LOGD_ERR("sort Over");
+	//cout << contours.size() << endl;
+	//LOGD_ERR(contours.size());
+	Rect rect;
+
+	//vector<Vec3f> mCircle;
+	//	assert(contours.size()>=2);
 	switch (FLAG) {
 	case 0:
-		for (int i = 0; i < 2; i++) {
+		for (int i = 0; i < contours.size() && i < 2; i++) {
 
 			rect = boundingRect(contours[i]);
 
@@ -696,52 +726,63 @@ void findFeaturePoint(Mat src, vector<Point>& point, vector<Rect>& rect_res,
 		break;
 	case 1:
 		Mat subThreshold;
-		int MAX_RIGHT_I = 0, MAX_RIGHT_J = 0;
-		int MAX_LEFT_I = 1000, MAX_LEFT_J = 1000;
+		int MOST_RIGHT_I, MOST_RIGHT_J, MOST_LEFT_I, MOST_LEFT_J;
 		float curV;
-		for (int k = 0; k < 2; k++) {
+		for (int k = 0; k < contours.size() && k < 2; k++) {
+			MOST_RIGHT_I = 0;
+			MOST_RIGHT_J = 0;
+			MOST_LEFT_I = 1000;
+			MOST_LEFT_J = 1000;
 
 			rect = boundingRect(contours[k]);
+			//	houghCircleInRect(src_copy,rect,mCircle);
+
 			subThreshold =
 					thresholdRes.colRange(rect.tl().x, rect.br().x).rowRange(
 							rect.tl().y, rect.br().y);
-			//imshow("SSS",subThreshold);
+
+			//imshow("Find Corner", subThreshold);
 			for (int i = 0; i < subThreshold.size().height; i++)
 				for (int j = 0; j < subThreshold.size().width; j++) {
 
 					try {
 						curV = subThreshold.data[i * subThreshold.size().width
 								* subThreshold.channels() + j];
+
 					} catch (cv::Exception& e) {
 						cout << e.what() << endl;
 					}
 
-					if (curV <= 10) {
-						if (j >= MAX_RIGHT_J) {
+					if (curV <= 5) {
+						if (j >= MOST_RIGHT_J) {
 
-							MAX_RIGHT_I = i;
-							MAX_RIGHT_J = j;
+							MOST_RIGHT_I = i;
+							MOST_RIGHT_J = j;
 						}
 
-						if (j <= MAX_LEFT_J) {
+						if (j <= MOST_LEFT_J) {
 
-							MAX_LEFT_I = i;
-							MAX_LEFT_J = j;
+							MOST_LEFT_I = i;
+							MOST_LEFT_J = j;
 
 						}
 					}
 
 				}
 			point.push_back(
-					Point(MAX_LEFT_J + rect.tl().x, MAX_LEFT_I + rect.tl().y));
+					Point(MOST_LEFT_J + rect.tl().x,
+							MOST_LEFT_I + rect.tl().y));
 			point.push_back(
-					Point(MAX_RIGHT_J + rect.tl().x,
-							MAX_RIGHT_I + rect.tl().y));
+					Point(MOST_RIGHT_J + rect.tl().x,
+							MOST_RIGHT_I + rect.tl().y));
 			rect_res.push_back(rect);
-			//rectangle(src, rect, M_RED);
+
+			//	rectangle(src, rect, M_RED);
 		}
 		break;
 	}
+	//imshow("Processing",src);
+	return;
 	LOGD_ERR("findFeaturePoint Exit");
 }
 int refineEyeContour(Mat face, Rect eyeContour, Point center) {

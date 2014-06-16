@@ -82,7 +82,6 @@ public class AddPersonActivity extends Activity implements
 	private double[] Confidence;
 	private File mCascadeFileEye;
 	private MyFaceDetector mNativeFaceDetector;
-	private MyFaceDetector mNativeEyeDetector;
 	private MyFaceRecognizer mFaceRec;
 	private int mDetectorType = NATIVE_DETECTOR;
 	private float mRelativeFaceSize = 0.2f;
@@ -150,7 +149,7 @@ public class AddPersonActivity extends Activity implements
 					mNativeFaceDetector = new MyFaceDetector(
 							mCascadeFile.getAbsolutePath(), 0,
 							MyFaceDetector.TYPE_DetectionBasedTracker);
-					mNativeEyeDetector = new MyFaceDetector(
+					new MyFaceDetector(
 							mCascadeFileEye.getAbsolutePath(), 0,
 							MyFaceDetector.TYPE_DetectionBasedTracker);
 					mFaceRec = new MyFaceRecognizer(curFaceRecognizer);
